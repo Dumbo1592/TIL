@@ -1,2 +1,90 @@
+깃의 주요 명령어 및 동작 방식
+Git은 소스 코드의 변경 이력을 기록하고 관리하는 분산 관리 시스템(VCS)이다
+
+1. Git의 기본 구조
+
+Working Directory(실제 파일을 수정하는 작업 공간)
+              |git add|
+Staging Area(커밋할 변경 사항을 준비하는 공간)
+              |git commit|
+Local Repository(로컬에 버전 이력을 저장하는 공간)
+              |git push, git fetch|
+Remote Repository(GitHub 등의 원격 저장소)
+
+기본 명령어 
+git init 로컬 저장소 생성
+git clone 원격 저장소 복제
+git add 변경 사항을 스테이징
+git commit 변경 사항을 버전으로 기록
+git push 원격 저장소에 커밋 전송
+git pull 원격 변경 사항을 가져와 통합
+git fetch 원격 변경 사항을 가져오기만 함
+git status 현재 작업 상태 확인
+git log 커밋 이력 확인
+git diff 파일의 변경 내용 확인
+
+브랜치 관리
+git branch 브랜치 조회 및 생성
+git switch 브랜치 이동
+git merge 브랜치 병합
+git rebase 커밋의 기반 위치 재설정
+git branch -d 브랜치 삭제
+
+변경 사항 복구
+git resotre 파일 변경 사항 복구
+git reset 커밋 위치 또는 스테이징 상태 변경
+git revert 기존 커밋을 취소하는 새 커밋 생성
+git stash 미커밋 변경 사항 임시 보관
+git stach pop 보관한 변경 사항 복원
+
+원격 저장소 및 설정
+git remote -v 연결된 원격 저장소 확인
+git remote add 원격 저장소 연결
+git remote set-url 원격 저장소 주소 변경
+git config Git환경 설정
+
+Git 처음 사용
+
+1. Git 설치 확인: 버전 확인
+git --version
+
+2. 사용자 정보 설정: 커밋을 작성한 사람의 정보를 기록하기 위한 설정
+git config --global user.name "사용자 이름"
+git config --global user.email "이메일 주소"
+
+git config --list
+
+3. 로컬 저장소 생성: 현재 프로젝트 폴더에 .git 디렉터리를 생성하여 버전 관리
 git init
-git 
+
+4. 변경 상태 확인: 새로운 파일, 수정된 파일, 삭제된 파일 등을 확인
+git status
+
+5. 스테이징: 현재 변경 사항을 커밋할 대상으로 등록
+git add .
+
+6. 커밋: 스테이징된 변경 사항을 로컬 저장소에 하나의 버전으로 기록
+git commit -m "Initial commit"
+
+7. 브랜치 이름 설정: 현재 브랜치 이름을 main으로 변경
+git branch -M main
+
+8. GitHub 원격 저장소 연결: GitHub에서 빈 저장소를 생성한 후 실행
+git remote add origin https://github.com/사용자명/저장소명.git
+
+9. 원격 저장소에 업로드
+git push -u origin main
+
+이후 반복 작업
+git add .
+git commit -m "변경 내용"
+git push
+
+
+
+
+
+
+
+
+
