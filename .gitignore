@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite
+*.sqlite3
+/AX_fullstack/dev/first_git_token.txt
+/AX_fullstack/src/python/Day19_20261122/회원
